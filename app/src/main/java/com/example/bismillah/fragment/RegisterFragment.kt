@@ -16,9 +16,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegisterFragment : Fragment() {
 
-
     lateinit var binding: FragmentRegisterBinding
-    lateinit var pref: SharedPreferences
+    lateinit var sharedpref: SharedPreferences
     lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
@@ -33,11 +32,10 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         firebaseAuth = FirebaseAuth.getInstance()
-        pref = requireActivity().getSharedPreferences("Regist", Context.MODE_PRIVATE)
+        sharedpref = requireActivity().getSharedPreferences("Register", Context.MODE_PRIVATE)
 
         binding.btnRegister.setOnClickListener {
             register()
-
         }
 
     }
@@ -45,10 +43,10 @@ class RegisterFragment : Fragment() {
     fun register() {
         val username = binding.usernameEditText.text.toString()
         val email = binding.emailEditText.text.toString()
-        val pass = binding.passEditText.text.toString()
-        val confirmpass = binding.confirmpassEditText.text.toString()
+        val pass = binding.passwordEditText.text.toString()
+        val confirmpass = binding.konfirmasiEditText.text.toString()
 
-        val addAkun = pref.edit()
+        val addAkun = sharedpref.edit()
         addAkun.putString("username", username)
 
         if (username.isNotEmpty() && email.isNotEmpty() && pass.isNotEmpty() && confirmpass.isNotEmpty()) {
@@ -64,10 +62,10 @@ class RegisterFragment : Fragment() {
                 }
 
             } else {
-                Toast.makeText(context, "Password Tidak Sesuai", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Password Anda Masih Belum Sesuai", Toast.LENGTH_LONG).show()
             }
         } else {
-            Toast.makeText(context, "Maaf Data Belum Lengkap", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Maaf Masih Ada Data Yang Masih Belum di Isi", Toast.LENGTH_SHORT).show()
         }
     }
 }

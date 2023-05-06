@@ -19,10 +19,10 @@ import java.util.Locale
 
 
 class LoginFragment : Fragment() {
-    lateinit var binding: FragmentLoginBinding
-    lateinit var pref: SharedPreferences
-    lateinit var firebaseAuth: FirebaseAuth
 
+    lateinit var binding: FragmentLoginBinding
+    lateinit var sharedpref: SharedPreferences
+    lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +35,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        pref = requireActivity().getSharedPreferences("Regist", Context.MODE_PRIVATE)
+        sharedpref = requireActivity().getSharedPreferences("Register", Context.MODE_PRIVATE)
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.btnLogin.setOnClickListener {
@@ -58,15 +58,15 @@ class LoginFragment : Fragment() {
 
     fun login(){
         val email = binding.emailEditText.text.toString()
-        val password = binding.passEditText.text.toString()
+        val password = binding.passwordEdiText.text.toString()
 
         if (email.isNotEmpty() && password.isNotEmpty()){
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                 if (it.isSuccessful){
-                    Toast.makeText(context,"Login Berhasil", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context,"Login Telah Berhasil", Toast.LENGTH_LONG).show()
                     Navigation.findNavController(binding.root).navigate(R.id.action_loginFragment_to_homeFragment)
                 }else{
-                    Toast.makeText(context, "Coba Cek Email dan password kembali",Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Email atau Password Kamu Ada Yang Salah",Toast.LENGTH_LONG).show()
                 }
             }
         }

@@ -20,17 +20,13 @@ import com.example.bismillah.viewmodel.TopRatedViewModel
 
 class HomeFragment : Fragment() {
 
-
     lateinit var binding: FragmentHomeBinding
     lateinit var pref: SharedPreferences
     private val ViewModel: TopRatedViewModel by viewModels()
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //getDataMovie()
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,15 +37,14 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        pref = requireActivity().getSharedPreferences("Regist", Context.MODE_PRIVATE)
-        val fullname = pref.getString("username", "username")
-        binding.welcome.text = "Welcome, $fullname!"
+        pref = requireActivity().getSharedPreferences("Register", Context.MODE_PRIVATE)
+        val username = pref.getString("username", "username")
+        binding.tvWelcome.text = "Welcome, $username!"
 
 
         //Profile
         binding.btnProfile.setOnClickListener {
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_homeFragment_to_profileFragment)
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_profileFragment)
         }
 
 
@@ -58,13 +53,11 @@ class HomeFragment : Fragment() {
     override fun onStart(){
         super.onStart()
 
-        Log.d("Tag", "Fragment activity : datanya ->")
         ViewModel.getMovies().observe(requireActivity()) {
-            Log.d("Tag", "Fragment activity : datanya -> $it")
             val adapter = TopRatedAdapter(it)
             val layoutManager = GridLayoutManager(context,2)
-            binding.rvFilm.layoutManager = layoutManager
-            binding.rvFilm.adapter = adapter
+            binding.rvTopRated.layoutManager = layoutManager
+            binding.rvTopRated.adapter = adapter
         }
 
     }

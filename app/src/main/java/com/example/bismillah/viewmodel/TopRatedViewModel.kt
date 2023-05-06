@@ -23,7 +23,7 @@ class TopRatedViewModel : ViewModel(){
     }
 
     private fun getAllMoviesrecom() {
-        RetrofitClient.instance.allMoviesTopRat().enqueue(object : Callback<ListMovie> {
+        RetrofitClient.instance.allMoviesTopRated().enqueue(object : Callback<ListMovie> {
             override fun onResponse(call: Call<ListMovie>, response: Response<ListMovie>) {
 
                 movietoprat.value = response.body()?.results

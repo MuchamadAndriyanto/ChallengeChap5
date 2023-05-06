@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 class ProfileFragment : Fragment() {
 
     lateinit var binding: FragmentProfileBinding
-    lateinit var pref : SharedPreferences
+    lateinit var sharedpref : SharedPreferences
     lateinit var firebaseAuth: FirebaseAuth
 
 
@@ -31,18 +31,18 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        pref = requireActivity().getSharedPreferences("Regist", Context.MODE_PRIVATE)
+        sharedpref = requireActivity().getSharedPreferences("Register", Context.MODE_PRIVATE)
 
 
         binding.btnUpdate.setOnClickListener {
-            val username = binding.usernameUpText.text.toString()
+            val username = binding.usernameUpdateText.text.toString()
 
-            var adduser = pref.edit()
-            adduser.putString("username", username)
-            adduser.apply()
+            var upusername = sharedpref.edit()
+            upusername.putString("username", username)
+            upusername.apply()
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
-            Toast.makeText(context, "Done Update", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Update Data Berhasil", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_homeFragment)
         }
 

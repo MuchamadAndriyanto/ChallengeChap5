@@ -11,7 +11,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="register"
+        android:text="REGISTER"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -23,30 +23,29 @@
 
 
     <ImageView
-        android:id="@+id/img1"
+        android:id="@+id/ivGambar2"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_below="@id/titleTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="56dp"
         android:contentDescription="@string/app_name"
+        android:src="@drawable/img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/UsernameInputLayout"
+        android:id="@+id/inputUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/img1"
+        app:layout_constraintTop_toBottomOf="@id/ivGambar2"
         app:hintEnabled="true"
-        android:hint="masukkanusername"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
+        android:hint="Username"
         app:endIconMode="clear_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -63,18 +62,16 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/EmailInputLayout"
+        android:id="@+id/inputEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:hintEnabled="true"
-        android:hint="masukkan_email"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
+        android:hint="Email"
         app:endIconMode="clear_text"
-        app:layout_constraintTop_toBottomOf="@id/UsernameInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/inputUsername"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -88,64 +85,61 @@
             android:textColor="@android:color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmpass_input_layout"
+        android:id="@+id/inputPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:hintEnabled="true"
-        android:hint="masukkan_konfirmasi_password"
-        app:counterMaxLength="20"
+        android:hint="Password"
         app:endIconMode="password_toggle"
-        app:layout_constraintTop_toBottomOf="@+id/EmailInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/confirmpass_edit_text"
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pass_input_layout"
+        android:id="@+id/konfirmasiInputPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:hintEnabled="true"
-        android:hint="masukkanpassword"
-        app:counterMaxLength="20"
+        android:hint="Konfirmasi Password"
         app:endIconMode="password_toggle"
-        app:layout_constraintTop_toBottomOf="@+id/confirmpass_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pass_edit_text"
+            android:id="@+id/konfirmasiEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:backgroundTint="@color/teal_700"
         android:enabled="true"
-        android:text="daftar"
+        android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass_input_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/konfirmasiInputPassword"
+        app:layout_constraintVertical_bias="0.127" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
