@@ -36,15 +36,9 @@ class ProfileFragment : Fragment() {
 
         binding.btnUpdate.setOnClickListener {
             val username = binding.usernameUpText.text.toString()
-            val nama = binding.namaUpText.text.toString()
-            val ttl = binding.tanggalUpText.text.toString()
-            val alamat = binding.alamatUpText.text.toString()
 
             var adduser = pref.edit()
             adduser.putString("username", username)
-            adduser.putString("nama", nama)
-            adduser.putString("ttl", ttl)
-            adduser.putString("alamat", alamat)
             adduser.apply()
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
