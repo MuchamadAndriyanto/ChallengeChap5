@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "468315111665",
+    "project_id": "challengechapter5-fc1f4",
+    "storage_bucket": "challengechapter5-fc1f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468315111665:android:8f3008c4ae540efc452950",
+        "android_client_info": {
+          "package_name": "com.example.bismillah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468315111665-fg30c2jnd5vdhd030p3jp116s1k2aiqo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bismillah",
+            "certificate_hash": "bd7b67d824568c83d9133dd80b77f51a2a4221be"
+          }
+        },
+        {
+          "client_id": "468315111665-qlcnib67kie817iro72ikj14l4qoq78b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcBXRaKAWPUyQqBRZjpGvahTQOtRy5QB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468315111665-qlcnib67kie817iro72ikj14l4qoq78b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
