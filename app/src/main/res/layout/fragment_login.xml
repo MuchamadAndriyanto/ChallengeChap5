@@ -7,34 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".fragment.LoginFragment">
 
-    <ImageView
-        android:id="@+id/btn_localization"
-        android:layout_width="57dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnIndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Indonesia"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/btn_indo"
+        android:id="@+id/btnEng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="id"
-        android:textSize="15sp"
+        android:layout_marginEnd="15dp"
+        android:text="English"
         android:textColor="@color/black"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_localization" />
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/btn_eng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="eng"
         android:textSize="15sp"
-        android:textColor="@color/black"
-        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_indo" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -75,6 +70,7 @@
         app:hintEnabled="true"
         android:hint="Masukan Email"
         app:endIconMode="clear_text"
+        android:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 

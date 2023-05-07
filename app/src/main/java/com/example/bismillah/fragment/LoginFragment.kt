@@ -46,13 +46,13 @@ class LoginFragment : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
-//        binding.btnIndo.setOnClickListener {
-//            setindo("id")
-//        }
-//
-//        binding.btnEng.setOnClickListener {
-//            seteng("eng")
-//        }
+        binding.btnIndo.setOnClickListener {
+            setIndonesia("id")
+        }
+
+        binding.btnEng.setOnClickListener {
+            setEnglish("eng")
+        }
 
     }
 
@@ -73,35 +73,32 @@ class LoginFragment : Fragment() {
 
     }
 
+    private fun setIndonesia(indonesia: String) {
+        var locale : Locale = Locale("id")
+        Locale.setDefault(locale)
 
+        var config: Configuration = Configuration()
+        config.locale = locale
 
-//    private fun setindo(indo: String) {
-//        var locale : Locale = Locale("id")
-//        Locale.setDefault(locale)
-//
-//        var config: Configuration = Configuration()
-//        config.locale = locale
-//
-//        val res = resources
-//        res.updateConfiguration(config, res.displayMetrics)
-//        val intent = Intent(activity, MainActivity::class.java)
-//        requireActivity().startActivity(intent)
-//
-//    }
-//
-//    private fun seteng(eng: String) {
-//        var locale : Locale = Locale("en")
-//        Locale.setDefault(locale)
-//
-//        var config: Configuration = Configuration()
-//        config.locale = locale
-//
-//        val res = resources
-//        res.updateConfiguration(config, res.displayMetrics)
-//        val intent = Intent(activity, MainActivity::class.java)
-//        requireActivity().startActivity(intent)
-//
-//    }
+        val res = resources
+        res.updateConfiguration(config, res.displayMetrics)
+        val intent = Intent(activity, MainActivity::class.java)
+        requireActivity().startActivity(intent)
+
+    }
+    private fun setEnglish(english: String) {
+        var locale : Locale = Locale("eng")
+        Locale.setDefault(locale)
+
+        var config: Configuration = Configuration()
+        config.locale = locale
+
+        val res = resources
+        res.updateConfiguration(config, res.displayMetrics)
+        val intent = Intent(activity, MainActivity::class.java)
+        requireActivity().startActivity(intent)
+
+    }
 
 
 }

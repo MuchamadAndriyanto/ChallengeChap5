@@ -49,7 +49,7 @@ class ProfileFragment : Fragment() {
         binding.btnLogout.setOnClickListener {
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
-            Toast.makeText(context, "Anda Keluar", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Anda Berhasil Logout", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_loginFragment)
         }
 
