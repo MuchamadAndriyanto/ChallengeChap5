@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:padding="18dp"
-        android:src="@drawable/baseline_person_3_24"/>
+        android:src="@drawable/baseline_person_4_24"/>
 
     <TextView
         android:id="@+id/tvHome"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvWelcome"
         android:gravity="center_horizontal"
-        android:text="HOME"
+        android:text="@string/HOME"
         android:textSize="34sp"
         android:textStyle="bold" />
 

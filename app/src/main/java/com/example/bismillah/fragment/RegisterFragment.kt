@@ -44,7 +44,7 @@ class RegisterFragment : Fragment() {
         val username = binding.usernameEditText.text.toString()
         val email = binding.emailEditText.text.toString()
         val pass = binding.passwordEditText.text.toString()
-        val confirmpass = binding.konfirmasiEditText.text.toString()
+        val confirmpass = binding.confirmasiEditText.text.toString()
 
         val addAkun = sharedpref.edit()
         addAkun.putString("username", username)

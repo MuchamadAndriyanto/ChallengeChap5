@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/signin_screen"
     tools:context=".fragment.LoginFragment">
 
     <com.google.android.material.textview.MaterialTextView
@@ -12,67 +13,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
+        android:layout_marginBottom="45dp"
         android:text="Indonesia"
-        android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="4dp" />
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/btnEng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
         android:text="English"
-        android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textColor="@color/biru"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="4dp" />
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="24dp" />
-
-    <ImageView
-        android:id="@+id/ivGambar"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_below="@id/tvTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/ivGambar"
+        android:layout_marginTop="350dp"
+        android:layout_marginHorizontal="16dp"
         app:hintEnabled="true"
-        android:hint="Masukan Email"
+        android:hint="@string/Input_Email"
         app:endIconMode="clear_text"
-        android:backgroundTint="@android:color/holo_green_dark"
+        app:boxStrokeColor="@color/yellow"
+        app:hintTextColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
@@ -92,7 +68,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:hintEnabled="true"
-        android:hint="Masukan Password"
+        android:hint="@string/Input_Password"
+        app:boxStrokeColor="@color/yellow"
+        app:hintTextColor="@color/yellow"
         app:endIconMode="password_toggle"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,10 +89,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="32dp"
-        android:text="Login"
-        android:layout_marginTop="25dp"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/Login"
         app:layout_constraintBottom_toTopOf="@+id/btnReg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -125,12 +103,14 @@
         android:id="@+id/btnReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="100dp"
         android:gravity="center_horizontal"
-        android:text="Belum punya akun?   klik di sini"
+        android:text="Don't have an account yet? Click here"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
 
 

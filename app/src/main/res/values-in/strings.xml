@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bismillah</string>
+    <string name="LOGIN">GABUNG</string>
+    <string name="Input_Email">Masukan_Email</string>
+    <string name="Input_Password">Masukan_Password</string>
+    <string name="Login">Gabung</string>
+    <string name="REGISTER">DAFTAR</string>
+    <string name="Username">Nama_Pengguna</string>
+    <string name="Email">Email</string>
+    <string name="Password">Kata_Sandi</string>
+    <string name="Password_Confirmation">Konfirmasi_Sandi</string>
+    <string name="Register">Daftar</string>
+    <string name="HOME">RUMAH</string>
+    <string name="PROFILE">PROFIL</string>
+    <string name="Update_Username">Perbarui_Nama_Pengguna</string>
+    <string name="Update">Memperbarui</string>
+    <string name="Logout">Keluar</string>
+    <string name="DETAIL">TERPERINCI</string>
+
+</resources>
