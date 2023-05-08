@@ -14,7 +14,7 @@ import retrofit2.Response
 class TopRatedViewModel : ViewModel(){
     private val movietoprat: MutableLiveData<List<com.example.bismillah.model.Result>> by lazy {
         MutableLiveData<List<com.example.bismillah.model.Result>>().also {
-            getAllMoviesrecom()
+            getAllMovietoprated()
         }
     }
 
@@ -22,7 +22,7 @@ class TopRatedViewModel : ViewModel(){
         return movietoprat
     }
 
-    private fun getAllMoviesrecom() {
+    private fun getAllMovietoprated() {
         RetrofitClient.instance.allMoviesTopRated().enqueue(object : Callback<ListMovie> {
             override fun onResponse(call: Call<ListMovie>, response: Response<ListMovie>) {
 

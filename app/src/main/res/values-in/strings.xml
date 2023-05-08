@@ -17,5 +17,8 @@
     <string name="Update">Memperbarui</string>
     <string name="Logout">Keluar</string>
     <string name="DETAIL">TERPERINCI</string>
+    <string name="Full_Name">Nama_Lengkap</string>
+    <string name="Date_of_Birth">Tanggal_Lahir</string>
+    <string name="Address">Alamat</string>
 
 </resources>

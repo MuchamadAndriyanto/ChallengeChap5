@@ -13,6 +13,9 @@
     <string name="HOME">HOME</string>
     <string name="PROFILE">PROFILE</string>
     <string name="Update_Username">Update_Username</string>
+    <string name="Full_Name">Full_Name</string>
+    <string name="Date_of_Birth">Date_of_Birth</string>
+    <string name="Address">Address</string>
     <string name="Update">Update</string>
     <string name="Logout">Logout</string>
     <string name="DETAIL">DETAIL</string>
